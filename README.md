@@ -3,6 +3,11 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/neomerx/json-api/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/neomerx/json-api/?branch=master)
 [![License](https://img.shields.io/packagist/l/neomerx/json-api.svg)](https://packagist.org/packages/neomerx/json-api)
 
+## Status
+
+This is a maintained fork of [neomerx/json-api](https://github.com/neomerx/json-api). It is maintained for use by
+[Laravel JSON:API](https://laraveljsonapi.io).
+
 ## Description 
 
 <a href="http://jsonapi.org/" target="_blank"><img src="http://jsonapi.org/images/jsonapi.png" alt="JSON API logo" title="JSON API" align="right" width="415" height="130" /></a>
