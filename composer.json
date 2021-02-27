@@ -1,5 +1,5 @@
 {
-  "name": "neomerx/json-api",
+  "name": "laravel-json-api/neomerx-json-api",
   "description": "Framework agnostic JSON API (jsonapi.org) implementation",
   "keywords": [
     "jsonapi.org",
@@ -18,6 +18,10 @@
     {
       "name": "neomerx",
       "email": "info@neomerx.com"
+    },
+    {
+      "name": "Christopher Gammie",
+      "email": "contact@gammie.co.uk"
     }
   ],
   "require": {
@@ -32,6 +36,10 @@
     "friendsofphp/php-cs-fixer": "^2.14"
   },
   "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
   "autoload": {
     "psr-4": {
       "Neomerx\\JsonApi\\": "src/"
@@ -42,6 +50,11 @@
     "psr-4": {
       "Neomerx\\Tests\\JsonApi\\": "tests/",
       "Neomerx\\Samples\\JsonApi\\": "sample/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "4.x-dev"
     }
   },
   "scripts": {
