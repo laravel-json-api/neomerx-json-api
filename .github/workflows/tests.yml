@@ -38,3 +38,6 @@ jobs:
 
     - name: Execute tests
       run: vendor/bin/phpunit
+
+    - name: Execute lint
+      run: vendor/bin/php-cs-fixer fix --no-interaction --diff --dry-run -v
