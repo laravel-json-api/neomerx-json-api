@@ -25,7 +25,6 @@ use IteratorAggregate;
 use Neomerx\JsonApi\Contracts\Schema\DocumentInterface;
 use Neomerx\JsonApi\Contracts\Schema\ErrorInterface;
 use Neomerx\JsonApi\Contracts\Schema\LinkInterface;
-use Serializable;
 
 /**
  * @package Neomerx\JsonApi
@@ -33,7 +32,7 @@ use Serializable;
  * @SuppressWarnings(PHPMD.TooManyPublicMethods)
  * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
  */
-class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, Countable
+class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
 {
     /**
      * @var array
@@ -43,7 +42,7 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, C
     /**
      * @inheritdoc
      */
-    public function getIterator()
+    public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->items);
     }
@@ -51,31 +50,25 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, C
     /**
      * @inheritdoc
      */
-    public function count()
+    public function count(): int
     {
         return \count($this->items);
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function serialize()
+    public function __serialize(): array
     {
-        return \serialize($this->items);
+        return $this->items;
+    }
+
+    public function __unserialize(array $data): void
+    {
+        $this->items = $data;
     }
 
     /**
      * @inheritdoc
      */
-    public function unserialize($serialized)
-    {
-        $this->items = \unserialize($serialized);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->items[$offset]);
     }
@@ -85,7 +78,7 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, C
      *
      * @return ErrorInterface
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): ErrorInterface
     {
         return $this->items[$offset];
     }
@@ -93,7 +86,7 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, C
     /**
      * @inheritdoc
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $offset === null ? $this->add($value) : $this->items[$offset] = $value;
     }
@@ -101,7 +94,7 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Serializable, C
     /**
      * @inheritdoc
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->items[$offset]);
     }

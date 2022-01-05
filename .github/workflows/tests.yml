@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: ['7.1', '7.2', '7.3', '7.4', '8.0']
+        php: ['7.4', '8.0', '8.1']
 
     steps:
     - name: Checkout Code
@@ -27,6 +27,7 @@ jobs:
         extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd
         tools: composer:v2
         coverage: none
+        ini-values: error_reporting=E_ALL
 
     - name: Install dependencies
       uses: nick-invision/retry@v1
