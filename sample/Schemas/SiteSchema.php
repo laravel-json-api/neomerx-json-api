@@ -29,7 +29,7 @@ class SiteSchema extends BaseSchema
     /**
      * @var bool
      */
-    public static $isShowCustomLinks = true;
+    public static bool $isShowCustomLinks = true;
 
     /**
      * @inheritdoc
