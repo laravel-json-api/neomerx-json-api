@@ -37,7 +37,7 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     /**
      * @var array
      */
-    private $items = [];
+    private array $items = [];
 
     /**
      * @inheritdoc

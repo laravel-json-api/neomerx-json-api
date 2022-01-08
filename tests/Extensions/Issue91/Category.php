@@ -23,14 +23,14 @@ namespace Neomerx\Tests\JsonApi\Extensions\Issue91;
  */
 class Category
 {
-    /** @var  int */
-    public $index = null;
+    /** @var  int|null */
+    public ?int $index = null;
 
-    /** @var  string */
-    public $description = null;
+    /** @var  string|null */
+    public ?string $description = null;
 
     /** @var  Category|null */
-    public $parent = null;
+    public ?Category $parent = null;
 
     /**
      * Category constructor.

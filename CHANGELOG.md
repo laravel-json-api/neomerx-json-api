@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Changed
 
+- **BREAKING**: All classes now have type-hinted properties.
 - **BREAKING**: added return types for internal methods to remove deprecation messages for PHP 8.1.
 - Minimum PHP version is now 7.4.
 

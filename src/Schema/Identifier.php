@@ -28,17 +28,17 @@ class Identifier implements IdentifierInterface
     /**
      * @var string
      */
-    private $index;
+    private string $index;
 
     /**
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
      * @var bool
      */
-    private $hasMeta;
+    private bool $hasMeta;
 
     /**
      * @var mixed

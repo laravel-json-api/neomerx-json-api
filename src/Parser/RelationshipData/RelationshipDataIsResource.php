@@ -44,7 +44,7 @@ class RelationshipDataIsResource extends BaseRelationshipData implements Relatio
     /**
      * @var null|ResourceInterface
      */
-    private $parsedResource = null;
+    private ?ResourceInterface $parsedResource = null;
 
     /**
      * @param FactoryInterface         $factory

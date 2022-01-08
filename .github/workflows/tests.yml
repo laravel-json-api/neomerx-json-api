@@ -39,5 +39,11 @@ jobs:
     - name: Execute tests
       run: vendor/bin/phpunit
 
+    - name: Execute coding standards
+      run: composer run test-cs
+
+    - name: Execute mess detector
+      run: composer run test-md
+
     - name: Execute lint
-      run: vendor/bin/php-cs-fixer fix --no-interaction --diff --dry-run -v
+      run: composer run test-cs-fixer

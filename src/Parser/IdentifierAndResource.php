@@ -45,27 +45,27 @@ class IdentifierAndResource implements ResourceInterface
     /**
      * @var EditableContextInterface
      */
-    private $context;
+    private EditableContextInterface $context;
 
     /**
      * @var PositionInterface
      */
-    private $position;
+    private PositionInterface $position;
 
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var SchemaContainerInterface
      */
-    private $schemaContainer;
+    private SchemaContainerInterface $schemaContainer;
 
     /**
      * @var SchemaInterface
      */
-    private $schema;
+    private SchemaInterface $schema;
 
     /**
      * @var mixed
@@ -73,24 +73,24 @@ class IdentifierAndResource implements ResourceInterface
     private $data;
 
     /**
-     * @var string
+     * @var string|null
      */
-    private $index;
+    private ?string $index;
 
     /**
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
      * @var null|array
      */
-    private $links = null;
+    private ?array $links = null;
 
     /**
      * @var null|array
      */
-    private $relationshipsCache = null;
+    private ?array $relationshipsCache = null;
 
     /**
      * @param EditableContextInterface $context

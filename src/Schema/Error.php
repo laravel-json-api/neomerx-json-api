@@ -37,42 +37,42 @@ class Error implements ErrorInterface
     /**
      * @var null|iterable
      */
-    private $links;
+    private ?iterable $links;
 
     /**
      * @var null|iterable
      */
-    private $typeLinks;
+    private ?iterable $typeLinks;
 
     /**
      * @var string|null
      */
-    private $status;
+    private ?string $status;
 
     /**
      * @var string|null
      */
-    private $code;
+    private ?string $code;
 
     /**
      * @var string|null
      */
-    private $title;
+    private ?string $title;
 
     /**
      * @var string|null
      */
-    private $detail;
+    private ?string $detail;
 
     /**
      * @var array|null
      */
-    private $source;
+    private ?array $source;
 
     /**
      * @var bool
      */
-    private $hasMeta;
+    private bool $hasMeta;
 
     /**
      * @var mixed

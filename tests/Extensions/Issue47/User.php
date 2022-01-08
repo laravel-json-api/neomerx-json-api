@@ -26,17 +26,17 @@ class User
     /**
      * @var string
      */
-    public $identity;
+    public string $identity;
 
     /**
      * @var string
      */
-    public $name;
+    public string $name;
 
     /**
      * @var array
      */
-    public $contactDetails;
+    public array $contactDetails;
 
     /**
      * User constructor.

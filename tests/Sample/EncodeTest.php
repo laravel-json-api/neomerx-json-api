@@ -29,7 +29,7 @@ class EncodeTest extends BaseTestCase
     /**
      * @var EncodeSamples
      */
-    private $samples;
+    private EncodeSamples $samples;
 
     /**
      * Set up.

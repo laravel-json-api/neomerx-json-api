@@ -38,17 +38,17 @@ final class CustomIdentifierAndResource extends IdentifierAndResource
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var SchemaContainerInterface
      */
-    private $container;
+    private SchemaContainerInterface $container;
 
     /**
      * @var BaseCustomSchema
      */
-    private $schema;
+    private BaseCustomSchema $schema;
 
     /**
      * @var mixed

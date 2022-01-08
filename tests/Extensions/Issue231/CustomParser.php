@@ -32,7 +32,7 @@ final class CustomParser extends Parser
     /**
      * @var array
      */
-    private $cachedPathsResults = [];
+    private array $cachedPathsResults = [];
 
     /**
      * @inheritdoc

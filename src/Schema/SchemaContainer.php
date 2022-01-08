@@ -48,22 +48,22 @@ class SchemaContainer implements SchemaContainerInterface
     /**
      * @var array
      */
-    private $providerMapping = [];
+    private array $providerMapping = [];
 
     /**
      * @var SchemaInterface[]
      */
-    private $createdProviders = [];
+    private array $createdProviders = [];
 
     /**
      * @var array
      */
-    private $resType2JsonType = [];
+    private array $resType2JsonType = [];
 
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @param FactoryInterface $factory

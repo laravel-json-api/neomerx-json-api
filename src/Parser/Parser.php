@@ -60,27 +60,27 @@ class Parser implements ParserInterface
     /**
      * @var SchemaContainerInterface
      */
-    private $schemaContainer;
+    private SchemaContainerInterface $schemaContainer;
 
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var array
      */
-    private $paths;
+    private array $paths;
 
     /**
      * @var array
      */
-    private $resourcesTracker;
+    private array $resourcesTracker;
 
     /**
      * @var EditableContextInterface
      */
-    private $context;
+    private EditableContextInterface $context;
 
     /**
      * @param FactoryInterface         $factory

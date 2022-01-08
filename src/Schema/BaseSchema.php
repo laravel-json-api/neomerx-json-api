@@ -32,12 +32,12 @@ abstract class BaseSchema implements SchemaInterface
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var null|string
      */
-    private $subUrl = null;
+    private ?string $subUrl = null;
 
     /**
      * @param FactoryInterface $factory

@@ -43,7 +43,7 @@ class HeaderParametersParserTest extends BaseTestCase
     /**
      * @var HeaderParametersParserInterface
      */
-    private $parser;
+    private HeaderParametersParserInterface $parser;
 
     /**
      * @inheritdoc

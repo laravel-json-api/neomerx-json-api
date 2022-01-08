@@ -45,7 +45,7 @@ class ErrorCollectionTest extends BaseTestCase
     /**
      * @var ErrorCollection
      */
-    private $collection;
+    private ErrorCollection $collection;
 
     /**
      * @inheritdoc

@@ -38,22 +38,22 @@ class EncodeIncludedObjectsTest extends BaseTestCase
     /**
      * @var Author
      */
-    private $author;
+    private Author $author;
 
     /**
      * @var Comment[]
      */
-    private $comments;
+    private array $comments;
 
     /**
      * @var Post
      */
-    private $post;
+    private Post $post;
 
     /**
      * @var Site
      */
-    private $site;
+    private Site $site;
 
     /**
      * Set up.
@@ -161,7 +161,7 @@ EOL;
             'JSON API paints my bikeshed!',
             'Outside every fat man there was an even fatter man trying to close in',
             $this->author,
-            (function () { yield from $this->comments; })()
+            (fn() => yield from $this->comments)()
         );
 
         $actual = Encoder::instance(
@@ -243,7 +243,7 @@ EOL;
             'JSON API paints my bikeshed!',
             'Outside every fat man there was an even fatter man trying to close in',
             $this->author,
-            (function () { yield from []; })()
+            (fn() => yield from [])()
         );
 
         $actual = Encoder::instance(

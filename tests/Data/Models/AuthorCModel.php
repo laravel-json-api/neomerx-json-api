@@ -37,7 +37,7 @@ class AuthorCModel implements ArrayAccess, IteratorAggregate
      *
      * @var array
      */
-    private $properties = [];
+    private array $properties = [];
 
     /**
      * @param int        $identity

@@ -29,22 +29,22 @@ class MediaType implements MediaTypeInterface
     /**
      * @var string
      */
-    private $type;
+    private string $type;
 
     /**
      * @var string
      */
-    private $subType;
+    private string $subType;
 
     /**
-     * @var string?
+     * @var string|null
      */
-    private $mediaType = null;
+    private ?string $mediaType = null;
 
     /**
      * @var array<string,string>|null
      */
-    private $parameters;
+    private ?array $parameters;
 
     /**
      * A list of parameter names for case-insensitive compare. Keys must be lower-cased.

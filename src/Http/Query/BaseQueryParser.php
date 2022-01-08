@@ -39,12 +39,12 @@ class BaseQueryParser implements BaseQueryParserInterface
     /**
      * @var array
      */
-    private $parameters;
+    private array $parameters;
 
     /**
      * @var string[]|null
      */
-    private $messages;
+    private ?array $messages;
 
     /**
      * @param array         $parameters

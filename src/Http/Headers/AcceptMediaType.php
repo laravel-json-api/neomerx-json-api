@@ -30,12 +30,12 @@ class AcceptMediaType extends MediaType implements AcceptMediaTypeInterface
     /**
      * @var float [0..1]
      */
-    private $quality;
+    private float $quality;
 
     /**
      * @var int
      */
-    private $position;
+    private int $position;
 
     /**
      * @param int    $position

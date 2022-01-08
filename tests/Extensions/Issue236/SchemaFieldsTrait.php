@@ -26,7 +26,7 @@ trait SchemaFieldsTrait
     /**
      * @var SchemaFields
      */
-    private $schemaFields;
+    private SchemaFields $schemaFields;
 
     /**
      * @return SchemaFields
