@@ -55,11 +55,18 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
         return \count($this->items);
     }
 
+    /**
+     * @return array
+     */
     public function __serialize(): array
     {
         return $this->items;
     }
 
+    /**
+     * @param array $data
+     * @return void
+     */
     public function __unserialize(array $data): void
     {
         $this->items = $data;

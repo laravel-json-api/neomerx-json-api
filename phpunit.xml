@@ -13,24 +13,23 @@
          stopOnFailure="false"
          cacheResult="false"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
-  <coverage>
-    <include>
-      <directory suffix=".php">src/</directory>
-    </include>
-  </coverage>
-  <testsuites>
-    <testsuite name="All">
-      <directory>./tests/</directory>
-    </testsuite>
-  </testsuites>
-  <!--logging>
-        <log type="tap" target="build/report.tap"/>
-        <log type="junit" target="build/report.junit.xml"/>
-        <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
-        <log type="coverage-text" target="build/coverage.txt"/>
-        <log type="coverage-clover" target="build/clover.xml"/>
-    </logging-->
-
+    <coverage>
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="All">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <!--logging>
+          <log type="tap" target="build/report.tap"/>
+          <log type="junit" target="build/report.junit.xml"/>
+          <log type="coverage-html" target="build/coverage" charset="UTF-8" yui="true" highlight="true"/>
+          <log type="coverage-text" target="build/coverage.txt"/>
+          <log type="coverage-clover" target="build/clover.xml"/>
+      </logging-->
     <php>
         <ini name="error_reporting" value="E_ALL"/>
     </php>
