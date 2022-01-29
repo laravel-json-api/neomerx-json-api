@@ -41,8 +41,8 @@ class Header implements HeaderInterface
      */
     public function __construct($name, $mediaTypes)
     {
-        $name = trim($name);
-        if (empty($name) === true) {
+        $name = is_string($name) ? trim($name) : $name;
+        if (is_string($name) === false || empty($name) === true) {
             throw new InvalidArgumentException('name');
         }
 
@@ -82,6 +82,10 @@ class Header implements HeaderInterface
      */
     public static function parse($header, $name)
     {
+        if (is_string($header) === false || empty($header) === true) {
+            throw new InvalidArgumentException('header');
+        }
+
         if (is_string($name) === false || empty($name) === true) {
             throw new InvalidArgumentException('header');
         }

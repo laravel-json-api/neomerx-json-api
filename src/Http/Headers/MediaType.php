@@ -60,13 +60,13 @@ class MediaType implements MediaTypeInterface
      */
     public function __construct($type, $subType, array $parameters = null)
     {
-        $type = trim($type);
-        if (empty($type) === true) {
+        $type = is_string($type) ? trim($type) : $type;
+        if (is_string($type) === false || empty($type) === true) {
             throw new InvalidArgumentException('type');
         }
 
-        $subType = trim($subType);
-        if (empty($subType) === true) {
+        $subType = is_string($subType) ? trim($subType) : $subType;
+        if (is_string($subType) === false || empty($subType) === true) {
             throw new InvalidArgumentException('subType');
         }
 

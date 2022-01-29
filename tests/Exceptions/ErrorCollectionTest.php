@@ -82,9 +82,8 @@ class ErrorCollectionTest extends BaseTestCase
             $this->assertInstanceOf(Error::class, $error);
         }
 
-        $serialized        = $this->collection->serialize();
-        $anotherCollection = new ErrorCollection();
-        $anotherCollection->unserialize($serialized);
+        $serialized        = serialize($this->collection);
+        $anotherCollection = unserialize($serialized);
         $this->assertEquals($this->collection, $anotherCollection);
 
         $this->assertCount(2, $this->collection);

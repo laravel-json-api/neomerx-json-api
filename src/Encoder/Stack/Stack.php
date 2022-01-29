@@ -102,7 +102,7 @@ class Stack implements StackInterface
     /**
      * @inheritdoc
      */
-    public function count()
+    public function count(): int
     {
         return $this->size;
     }
@@ -110,7 +110,7 @@ class Stack implements StackInterface
     /**
      * @inheritdoc
      */
-    public function getIterator()
+    public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->stack);
     }
