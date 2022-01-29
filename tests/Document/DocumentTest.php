@@ -50,7 +50,7 @@ class DocumentTest extends BaseTestCase
     /**
      * Set up.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -1149,11 +1149,11 @@ EOL;
 
     /**
      * Test relationship with invalid name.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testAddRelationshipWithInvalidName()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $this->document->addToData($parent = $this->schemaFactory->createResourceObject($this->getSchema(
             'people',
             '123',
@@ -1177,11 +1177,11 @@ EOL;
 
     /**
      * Test invalid name for resource attributes.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidNamesForResourceAttributesId()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $this->document->addToData($resource = $this->schemaFactory->createResourceObject($this->getSchema(
             'people',
             '123',
@@ -1194,11 +1194,11 @@ EOL;
 
     /**
      * Test invalid name for resource attributes.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidNamesForResourceAttributesType()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $this->document->addToData($resource = $this->schemaFactory->createResourceObject($this->getSchema(
             'people',
             '123',

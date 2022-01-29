@@ -36,7 +36,7 @@ class IdentitySchemaTest extends BaseTestCase
     /**
      * @inheritdoc
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -58,19 +58,17 @@ class IdentitySchemaTest extends BaseTestCase
         });
     }
 
-    /**
-     * @expectedException \LogicException
-     */
     public function testGetAttributes()
     {
+        $this->expectException(\LogicException::class);
+
         $this->schema->getAttributes((object)[]);
     }
 
-    /**
-     * @expectedException \LogicException
-     */
     public function testGetRelationships()
     {
+        $this->expectException(\LogicException::class);
+
         $this->schema->getRelationships((object)[], true, []);
     }
 }

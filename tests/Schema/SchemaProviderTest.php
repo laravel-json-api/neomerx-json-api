@@ -33,7 +33,7 @@ class SchemaProviderTest extends BaseTestCase
     /**
      * Set up.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
         $this->factory = new Factory();
@@ -41,11 +41,11 @@ class SchemaProviderTest extends BaseTestCase
 
     /**
      * Test schema provider.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testIncorrectInvalidResourceType()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         EmptySchema::$type   = '';
         EmptySchema::$subUrl = '/some-sub-url/';
 
@@ -54,11 +54,11 @@ class SchemaProviderTest extends BaseTestCase
 
     /**
      * Test schema provider.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testIncorrectInvalidSubUrl()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         EmptySchema::$type   = 'someTypes';
         EmptySchema::$subUrl = '';
 

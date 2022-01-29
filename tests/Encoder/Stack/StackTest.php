@@ -46,7 +46,7 @@ class StackTest extends BaseTestCase
     /**
      * Set up test.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

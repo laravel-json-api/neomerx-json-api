@@ -44,18 +44,17 @@ class EncoderTest extends BaseTestCase
     /**
      * Set up.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
         $this->encoderOptions = new EncoderOptions(0, 'http://example.com');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testEncodeInvalidData()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $encoder = Encoder::instance([
             Author::class => AuthorSchema::class
         ], $this->encoderOptions);
@@ -877,7 +876,7 @@ EOL;
         }
 
         $this->assertNotNull($catch);
-        $this->assertContains(Post::LINK_COMMENTS . '.' . Comment::LINK_AUTHOR, $catch->getMessage());
+        $this->assertStringContainsString(Post::LINK_COMMENTS . '.' . Comment::LINK_AUTHOR, $catch->getMessage());
         $this->assertNotNull($catch->getPrevious());
     }
 

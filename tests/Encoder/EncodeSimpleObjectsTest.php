@@ -38,7 +38,7 @@ class EncodeSimpleObjectsTest extends BaseTestCase
      */
     private $encoderOptions;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

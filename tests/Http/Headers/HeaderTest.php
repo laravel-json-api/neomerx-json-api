@@ -59,31 +59,31 @@ class HeaderTest extends BaseTestCase
 
     /**
      * Test invalid parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidParams1()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new Header('name', null);
     }
 
     /**
      * Test invalid parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidParams2()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new Header(null, []);
     }
 
     /**
      * Test invalid parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidParams3()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Header::parse('', '');
     }
 }

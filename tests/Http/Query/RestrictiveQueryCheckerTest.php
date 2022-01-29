@@ -55,7 +55,7 @@ class RestrictiveQueryCheckerTest extends BaseTestCase
     /**
      * Set up.
      */
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -111,7 +111,7 @@ class RestrictiveQueryCheckerTest extends BaseTestCase
         try {
             $checker->checkQuery($parameters);
         } catch (JsonApiException $exception) {
-            $this->assertContains('Include', $exception->getErrors()[0]->getTitle());
+            $this->assertStringContainsString('Include', $exception->getErrors()[0]->getTitle());
         }
 
         $this->assertNotNull($exception);
@@ -176,7 +176,7 @@ class RestrictiveQueryCheckerTest extends BaseTestCase
         try {
             $checker->checkQuery($parameters);
         } catch (JsonApiException $exception) {
-            $this->assertContains('Filter', $exception->getErrors()[0]->getTitle());
+            $this->assertStringContainsString('Filter', $exception->getErrors()[0]->getTitle());
         }
 
         $this->assertNotNull($exception);
@@ -204,7 +204,7 @@ class RestrictiveQueryCheckerTest extends BaseTestCase
         try {
             $checker->checkQuery($parameters);
         } catch (JsonApiException $exception) {
-            $this->assertContains('Page', $exception->getErrors()[0]->getTitle());
+            $this->assertStringContainsString('Page', $exception->getErrors()[0]->getTitle());
         }
 
         $this->assertNotNull($exception);
@@ -302,7 +302,7 @@ class RestrictiveQueryCheckerTest extends BaseTestCase
         try {
             $checker->checkQuery($parameters);
         } catch (JsonApiException $exception) {
-            $this->assertContains('Sort', $exception->getErrors()[0]->getTitle());
+            $this->assertStringContainsString('Sort', $exception->getErrors()[0]->getTitle());
         }
 
         $this->assertNotNull($exception);

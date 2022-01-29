@@ -26,41 +26,41 @@ class MediaTypeTest extends BaseTestCase
 {
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams1()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new MediaType(null, 'subtype');
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams2()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new MediaType('type', null);
     }
 
     /**
      * Test invalid parse parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidParseParams1()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         MediaType::parse(1, 'boo.bar+baz');
     }
 
     /**
      * Test invalid parse parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidParseParams2()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         MediaType::parse(1, 'boo/bar+baz;param');
     }
 

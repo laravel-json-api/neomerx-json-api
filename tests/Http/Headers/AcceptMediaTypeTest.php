@@ -26,51 +26,51 @@ class AcceptMediaTypeTest extends BaseTestCase
 {
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams1()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptMediaType(1, null, 'subtype');
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams2()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptMediaType(1, 'type', null);
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams4()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptMediaType(1, 'type', 'subtype', null, 5);
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams6()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptMediaType(1, 'type', 'subtype', null, 0.4, 1234);
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams7()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptMediaType(-1, 'type', 'subtype', null, 0.4, null);
     }
 }

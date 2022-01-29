@@ -163,37 +163,34 @@ class AcceptHeaderTest extends BaseTestCase
         ], $header);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidHeader1()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         AcceptHeader::parse(null);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidHeader2()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         AcceptHeader::parse('');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testInvalidHeader3()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         AcceptHeader::parse('foo/bar; baz');
     }
 
     /**
      * Test invalid constructor parameters.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testInvalidConstructorParams()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         new AcceptHeader(null);
     }
 

@@ -26,21 +26,21 @@ class ExceptionsTest extends BaseTestCase
 {
     /**
      * Test throwInvalidArgument.
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testThrowInvalidArgument()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         Exceptions::throwInvalidArgument('param', 'some value');
     }
 
     /**
      * Test throwLogicException.
-     *
-     * @expectedException \LogicException
      */
     public function testThrowLogicException()
     {
+        $this->expectException(\LogicException::class);
+
         Exceptions::throwLogicException('message');
     }
 }
