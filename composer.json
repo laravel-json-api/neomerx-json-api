@@ -50,6 +50,11 @@
   "config": {
     "sort-packages": true
   },
+  "extra": {
+    "branch-alias": {
+      "dev-v1.x": "1.x-dev"
+    }
+  },
   "scripts": {
     "test": ["@test-unit", "@test-cs", "@test-md"],
     "test-unit": "./vendor/phpunit/phpunit/phpunit --coverage-text",
