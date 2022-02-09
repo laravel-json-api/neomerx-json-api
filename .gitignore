@@ -5,3 +5,4 @@ build/
 vendor/
 composer.lock
 perf/blackfire.io.env
+.phpunit.result.cache
