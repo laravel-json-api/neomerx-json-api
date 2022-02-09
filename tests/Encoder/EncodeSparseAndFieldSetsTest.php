@@ -38,22 +38,22 @@ class EncodeSparseAndFieldSetsTest extends BaseTestCase
     /**
      * @var Author
      */
-    private $author;
+    private Author $author;
 
     /**
      * @var Comment[]
      */
-    private $comments;
+    private array $comments;
 
     /**
      * @var Post
      */
-    private $post;
+    private Post $post;
 
     /**
      * @var Site
      */
-    private $site;
+    private Site $site;
 
     /**
      * Set up.

@@ -48,12 +48,12 @@ class JsonApiException extends BaseJsonApiException
     /**
      * @var ErrorCollection
      */
-    private $errors;
+    private ErrorCollection $errors;
 
     /**
      * @var int
      */
-    private $httpCode;
+    private int $httpCode;
 
     /**
      * @param ErrorInterface|iterable $errors

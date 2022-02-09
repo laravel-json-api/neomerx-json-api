@@ -32,7 +32,7 @@ class Comment extends stdClass
     /**
      * @param int    $identity
      * @param string $body
-     * @param Author $author
+     * @param Author|null $author
      *
      * @return Comment
      */

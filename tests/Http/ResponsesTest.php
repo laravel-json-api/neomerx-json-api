@@ -37,12 +37,12 @@ class ResponsesTest extends BaseTestCase
     /**
      * @var MockInterface
      */
-    private $mock;
+    private MockInterface $mock;
 
     /**
      * @var ResponsesInterface
      */
-    private $responses;
+    private ResponsesInterface $responses;
 
     /**
      * Set up tests.

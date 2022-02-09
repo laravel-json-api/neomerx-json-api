@@ -32,52 +32,52 @@ trait EncoderPropertiesTrait
     /**
      * @var SchemaContainerInterface
      */
-    private $container;
+    private SchemaContainerInterface $container;
 
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var string
      */
-    private $urlPrefix;
+    private string $urlPrefix;
 
     /**
      * @var array
      */
-    private $includePaths;
+    private array $includePaths;
 
     /**
      * @var array
      */
-    private $fieldSets;
+    private array $fieldSets;
 
     /**
      * @var int
      */
-    private $encodeOptions;
+    private int $encodeOptions;
 
     /**
      * @var int
      */
-    private $encodeDepth;
+    private int $encodeDepth;
 
     /**
-     * @var iterable
+     * @var iterable|null
      */
-    private $links;
+    private ?iterable $links;
 
     /**
-     * @var iterable
+     * @var iterable|null
      */
-    private $profile;
+    private ?iterable $profile;
 
     /**
      * @var bool
      */
-    private $hasMeta;
+    private bool $hasMeta;
 
     /**
      * @var mixed
@@ -87,7 +87,7 @@ trait EncoderPropertiesTrait
     /**
      * @var string|null
      */
-    private $jsonApiVersion;
+    private ?string $jsonApiVersion;
 
     /**
      * @var mixed
@@ -97,7 +97,7 @@ trait EncoderPropertiesTrait
     /**
      * @var bool
      */
-    private $hasJsonApiMeta;
+    private bool $hasJsonApiMeta;
 
     /**
      * Reset to initial state.

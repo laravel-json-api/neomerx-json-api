@@ -30,7 +30,7 @@ class FieldSetFilter implements FieldSetFilterInterface
     /**
      * @var array
      */
-    private $fieldSets;
+    private array $fieldSets;
 
     /**
      * @param array|null $fieldSets

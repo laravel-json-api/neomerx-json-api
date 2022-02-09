@@ -89,22 +89,22 @@ class Factory implements FactoryInterface
             /**
              * @var int
              */
-            private $level;
+            private int $level;
 
             /**
              * @var string
              */
-            private $path;
+            private string $path;
 
             /**
              * @var null|string
              */
-            private $parentType;
+            private ?string $parentType;
 
             /**
              * @var null|string
              */
-            private $parentRelationship;
+            private ?string $parentRelationship;
 
             /**
              * @param int         $level
@@ -212,12 +212,12 @@ class Factory implements FactoryInterface
             /**
              * @var PositionInterface
              */
-            private $position;
+            private PositionInterface $position;
 
             /**
              * @var SchemaIdentifierInterface
              */
-            private $identifier;
+            private SchemaIdentifierInterface $identifier;
 
             /**
              * @param PositionInterface         $position
@@ -312,32 +312,32 @@ class Factory implements FactoryInterface
             /**
              * @var PositionInterface
              */
-            private $position;
+            private PositionInterface $position;
 
             /**
              * @var bool
              */
-            private $hasData;
+            private bool $hasData;
 
             /**
-             * @var ?RelationshipDataInterface
+             * @var RelationshipDataInterface|null
              */
-            private $data;
-
-            /**
-             * @var bool
-             */
-            private $hasLinks;
-
-            /**
-             * @var ?iterable
-             */
-            private $links;
+            private ?RelationshipDataInterface $data;
 
             /**
              * @var bool
              */
-            private $hasMeta;
+            private bool $hasLinks;
+
+            /**
+             * @var iterable|null
+             */
+            private ?iterable $links;
+
+            /**
+             * @var bool
+             */
+            private bool $hasMeta;
 
             /**
              * @var mixed
@@ -347,7 +347,7 @@ class Factory implements FactoryInterface
             /**
              * @var bool
              */
-            private $metaIsCallable;
+            private bool $metaIsCallable;
 
             /**
              * @param PositionInterface              $position
@@ -528,17 +528,17 @@ class Factory implements FactoryInterface
             /**
              * @var array
              */
-            private $fieldSets;
+            private array $fieldSets;
 
             /**
              * @var array
              */
-            private $includePaths;
+            private array $includePaths;
 
             /**
              * @var PositionInterface|null
              */
-            private $position = null;
+            private ?PositionInterface $position = null;
 
             /**
              * @param array $fieldSets

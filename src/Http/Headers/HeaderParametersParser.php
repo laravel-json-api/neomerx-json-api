@@ -31,7 +31,7 @@ class HeaderParametersParser implements HeaderParametersParserInterface
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @param FactoryInterface $factory

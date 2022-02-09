@@ -34,7 +34,7 @@ class DocumentWriter extends BaseWriter implements DocumentWriterInterface
     /**
      * @var array
      */
-    private $addedResources;
+    private array $addedResources;
 
     /**
      * @inheritdoc

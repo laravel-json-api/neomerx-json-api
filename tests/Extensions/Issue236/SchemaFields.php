@@ -36,16 +36,16 @@ final class SchemaFields
     private const FIELD_SEPARATOR = ',';
 
     /** @var array */
-    private $fastRelationships;
+    private array $fastRelationships;
 
     /** @var array */
-    private $fastRelationshipLists;
+    private array $fastRelationshipLists;
 
     /** @var array */
-    private $fastFields;
+    private array $fastFields;
 
     /** @var array */
-    private $fastFieldLists;
+    private array $fastFieldLists;
 
     /**
      * @param iterable $paths

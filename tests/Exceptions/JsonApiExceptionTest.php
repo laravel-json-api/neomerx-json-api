@@ -31,12 +31,12 @@ class JsonApiExceptionTest extends BaseTestCase
     /**
      * @var ErrorCollection
      */
-    private $collection;
+    private ErrorCollection $collection;
 
     /**
      * @var Error
      */
-    private $error;
+    private Error $error;
 
     /**
      * @inheritdoc

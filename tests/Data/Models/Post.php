@@ -35,7 +35,7 @@ class Post extends stdClass
      * @param int    $identity
      * @param string $title
      * @param string $body
-     * @param Author $author
+     * @param Author|null $author
      * @param array  $comments
      *
      * @return Post

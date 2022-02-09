@@ -34,22 +34,22 @@ abstract class DevSchema extends BaseSchema
     /**
      * @var array
      */
-    private $addToRelationship = [];
+    private array $addToRelationship = [];
 
     /**
      * @var array
      */
-    private $removeFromRelationship = [];
+    private array $removeFromRelationship = [];
 
     /**
      * @var array
      */
-    private $relationshipToRemove = [];
+    private array $relationshipToRemove = [];
 
     /**
-     * @var Closure
+     * @var Closure|null
      */
-    private $resourceLinksClosure = null;
+    private ?Closure $resourceLinksClosure = null;
 
     /**
      * @inheritdoc

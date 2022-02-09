@@ -40,12 +40,12 @@ class RelationshipDataIsCollection extends BaseRelationshipData implements Relat
     /**
      * @var iterable
      */
-    private $resources;
+    private iterable $resources;
 
     /**
-     * @var iterable
+     * @var iterable|null
      */
-    private $parsedResources = null;
+    private ?iterable $parsedResources = null;
 
     /**
      * @param FactoryInterface         $factory

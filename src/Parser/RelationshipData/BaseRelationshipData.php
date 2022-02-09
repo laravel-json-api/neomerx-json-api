@@ -35,22 +35,22 @@ abstract class BaseRelationshipData implements RelationshipDataInterface
     /**
      * @var FactoryInterface
      */
-    private $factory;
+    private FactoryInterface $factory;
 
     /**
      * @var SchemaContainerInterface
      */
-    private $schemaContainer;
+    private SchemaContainerInterface $schemaContainer;
 
     /**
      * @var EditableContextInterface
      */
-    private $context;
+    private EditableContextInterface $context;
 
     /**
      * @var PositionInterface
      */
-    private $position;
+    private PositionInterface $position;
 
     /**
      * @param FactoryInterface         $factory

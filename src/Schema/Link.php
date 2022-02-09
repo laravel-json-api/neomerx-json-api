@@ -31,21 +31,21 @@ class Link implements LinkInterface
      *
      * @var bool
      */
-    private $isSubUrl;
+    private bool $isSubUrl;
 
     /**
      * Get link’s URL value (full URL or sub-URL).
      *
      * @var string
      */
-    private $value;
+    private string $value;
 
     /**
      * If link has meta information.
      *
      * @var bool
      */
-    private $hasMeta;
+    private bool $hasMeta;
 
     /**
      * @var mixed

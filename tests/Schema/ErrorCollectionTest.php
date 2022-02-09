@@ -45,7 +45,7 @@ class ErrorCollectionTest extends BaseTestCase
     /**
      * @var ErrorCollection
      */
-    private $collection;
+    private ErrorCollection $collection;
 
     /**
      * @inheritdoc
@@ -84,10 +84,8 @@ class ErrorCollectionTest extends BaseTestCase
             $this->assertInstanceOf(ErrorInterface::class, $error);
         }
 
-        $serialized        = $this->collection->serialize();
-        $anotherCollection = new ErrorCollection();
-        $anotherCollection->unserialize($serialized);
-        $this->assertEquals($this->collection, $anotherCollection);
+        $serialized        = serialize($this->collection);
+        $this->assertEquals($this->collection, unserialize($serialized));
 
         $this->assertCount(2, $this->collection);
         unset($this->collection[0]);
