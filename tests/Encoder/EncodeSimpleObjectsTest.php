@@ -640,7 +640,7 @@ EOL;
     /**
      * Test encode meta and top-level links for simple object.
      */
-    public function testEncodeMetaAndtopLinksForSimpleObject(): void
+    public function testEncodeMetaAndTopLinksForSimpleObject(): void
     {
         $author  = Author::instance(9, 'Dan', 'Gebhardt');
         $links   = [Link::SELF => new Link(true, '/people/9', false)];
@@ -696,6 +696,132 @@ EOL;
                     }
                 ]
             },
+            "data" : {
+                "type"       : "people",
+                "id"         : "9",
+                "attributes" : {
+                    "first_name" : "Dan",
+                    "last_name"  : "Gebhardt"
+                },
+                "links" : {
+                    "self" : "http://example.com/people/9"
+                }
+            }
+        }
+EOL;
+        self::assertJsonStringEqualsJsonString($expected, $actual);
+    }
+
+    /**
+     * Test encode object with top-level meta set as `null`.
+     *
+     * @see https://github.com/laravel-json-api/neomerx-json-api/issues/3
+     */
+    public function testEncoderSimpleObjectWithNullMetaAndEmptyLinks(): void
+    {
+        $author  = Author::instance(9, 'Dan', 'Gebhardt');
+
+        $actual = Encoder::instance(
+            [
+                Author::class => function ($factory) {
+                    $schema = new AuthorSchema($factory);
+                    $schema->removeRelationship(Author::LINK_COMMENTS);
+
+                    return $schema;
+                },
+            ]
+        )
+            ->withUrlPrefix('http://example.com')
+            ->withMeta(null)
+            ->withLinks([])
+            ->encodeData($author);
+
+        $expected = <<<EOL
+        {
+            "data" : {
+                "type"       : "people",
+                "id"         : "9",
+                "attributes" : {
+                    "first_name" : "Dan",
+                    "last_name"  : "Gebhardt"
+                },
+                "links" : {
+                    "self" : "http://example.com/people/9"
+                }
+            }
+        }
+EOL;
+        self::assertJsonStringEqualsJsonString($expected, $actual);
+    }
+
+    /**
+     * Test encode object with top-level meta set as an empty array.
+     *
+     * @see https://github.com/laravel-json-api/neomerx-json-api/issues/3
+     * @see https://jsonapi.org/format/#document-meta meta member must be an object.
+     */
+    public function testEncoderSimpleObjectWithMetaAsEmptyArray(): void
+    {
+        $author  = Author::instance(9, 'Dan', 'Gebhardt');
+
+        $actual = Encoder::instance(
+            [
+                Author::class => function ($factory) {
+                    $schema = new AuthorSchema($factory);
+                    $schema->removeRelationship(Author::LINK_COMMENTS);
+
+                    return $schema;
+                },
+            ]
+        )
+            ->withUrlPrefix('http://example.com')
+            ->withMeta([])
+            ->encodeData($author);
+
+        $expected = <<<EOL
+        {
+            "data" : {
+                "type"       : "people",
+                "id"         : "9",
+                "attributes" : {
+                    "first_name" : "Dan",
+                    "last_name"  : "Gebhardt"
+                },
+                "links" : {
+                    "self" : "http://example.com/people/9"
+                }
+            }
+        }
+EOL;
+        self::assertJsonStringEqualsJsonString($expected, $actual);
+    }
+
+    /**
+     * Test encoding with an encoder that had meta, but is now reset.
+     */
+    public function testEncoderSimpleObjectWithResetMeta(): void
+    {
+        $author  = Author::instance(9, 'Dan', 'Gebhardt');
+
+        $encoder = Encoder::instance(
+            [
+                Author::class => function ($factory) {
+                    $schema = new AuthorSchema($factory);
+                    $schema->removeRelationship(Author::LINK_COMMENTS);
+
+                    return $schema;
+                },
+            ]
+        );
+
+        $encoder->withMeta(['foo' => 'bar'])->reset();
+
+        $actual = $encoder
+            ->withUrlPrefix('http://example.com')
+            ->encodeData($author);
+
+        $expected = <<<EOL
+        {
             "data" : {
                 "type"       : "people",
                 "id"         : "9",
