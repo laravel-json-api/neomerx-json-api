@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning](http://semver.org/) and [this changelog format](http://keepachangelog.com/).
 
+## [5.0.1] - 2022-06-25
+
+### Fixed
+
+- [#3](https://github.com/laravel-json-api/neomerx-json-api/issues/3) The encoder now omits the top-level `meta` member
+  if the meta value is set to `null`. Previously it was encoding `null` into the JSON:API document, which did not
+  conform to the interface which says that: "If 'null' meta will not appear in a document."
+- [#3](https://github.com/laravel-json-api/neomerx-json-api/issues/3) The encoder now omits the top-level `meta` member
+  if the meta value is an empty array. Previously it was encoding an empty array as the JSON value. This does not
+  confirm to the JSON:API specification, which states that the `meta` member must be an object.
+
 ## [5.0.0] - 2022-02-09
 
 ### Added

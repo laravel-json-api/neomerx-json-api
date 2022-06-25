@@ -361,8 +361,8 @@ trait EncoderPropertiesTrait
      */
     public function withMeta($meta): EncoderInterface
     {
-        $this->meta    = $meta;
-        $this->hasMeta = true;
+        $this->meta    = $meta ?: null;
+        $this->hasMeta = (null !== $this->meta);
 
         return $this;
     }
