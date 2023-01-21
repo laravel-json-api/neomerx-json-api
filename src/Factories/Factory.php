@@ -89,7 +89,7 @@ class Factory implements FactoryInterface
     /**
      * @inheritdoc
      */
-    public function setLogger(LoggerInterface $logger)
+    public function setLogger(LoggerInterface $logger): void
     {
         $this->logger->setLogger($logger);
     }

@@ -29,7 +29,7 @@ class ProxyLogger extends AbstractLogger
     /**
      * @inheritdoc
      */
-    public function log($level, $message, array $context = [])
+    public function log($level, $message, array $context = []): void
     {
         $this->logger === null ?: $this->logger->log($level, $message, $context);
     }
