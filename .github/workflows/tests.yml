@@ -47,4 +47,3 @@ jobs:
 
     - name: Execute lint
       run: composer run test-cs-fixer
-      if: matrix.php != 8.2
