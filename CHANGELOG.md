@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. This project adheres to
 [Semantic Versioning](http://semver.org/) and [this changelog format](http://keepachangelog.com/).
 
+## [5.0.2] - 2023-05-29
+
+### Fixed
+
+- [#5](https://github.com/laravel-json-api/neomerx-json-api/issues/5) Fix property used before instantiation bug in
+  error class.
+
 ## [5.0.1] - 2022-06-25
 
 ### Fixed
