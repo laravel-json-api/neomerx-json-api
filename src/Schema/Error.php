@@ -35,9 +35,9 @@ class Error implements ErrorInterface
     private $index;
 
     /**
-     * @var null|iterable
+     * @var array
      */
-    private ?iterable $links;
+    private array $links = [];
 
     /**
      * @var null|iterable
@@ -149,7 +149,7 @@ class Error implements ErrorInterface
      */
     public function getLinks(): ?iterable
     {
-        return $this->links;
+        return empty($this->links) ? null : $this->links;
     }
 
     /**
