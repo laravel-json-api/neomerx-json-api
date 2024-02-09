@@ -8,6 +8,9 @@
 This is a maintained fork of [neomerx/json-api](https://github.com/neomerx/json-api). It is maintained for use by
 [Laravel JSON:API](https://laraveljsonapi.io).
 
+**Although we use this package for Laravel JSON:API, it remains framework-agnostic. We have no plans to change that. So
+you can continue to use it in any PHP application.**
+
 ## Description 
 
 <a href="http://jsonapi.org/" target="_blank"><img src="http://jsonapi.org/images/jsonapi.png" alt="JSON API logo" title="JSON API" align="right" width="415" height="130" /></a>
