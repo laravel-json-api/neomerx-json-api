@@ -234,7 +234,8 @@ class Parser implements ParserInterface
         }
 
         // parse relationships only for resources not seen before (prevents infinite loop for circular references)
-        if ($seenBefore === false) {
+        // or parse top level resource relationships
+        if ($seenBefore === false || $resource->getPosition()->getLevel() <= ParserInterface::ROOT_LEVEL) {
             // remember by id and type
             $this->resourcesTracker[$resource->getId()][$resource->getType()] = true;
 
