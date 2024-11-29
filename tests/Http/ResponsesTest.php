@@ -283,7 +283,7 @@ class ResponsesTest extends BaseTestCase
      *
      * @return void
      */
-    private function willBeCalledGetMediaType(string $type, string $subType, array $parameters = null): void
+    private function willBeCalledGetMediaType(string $type, string $subType, ?array $parameters = null): void
     {
         $mediaType = new MediaType($type, $subType, $parameters);
 

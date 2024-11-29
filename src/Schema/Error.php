@@ -97,13 +97,13 @@ class Error implements ErrorInterface
      */
     public function __construct(
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $status = null,
-        string $code = null,
-        string $title = null,
-        string $detail = null,
-        array $source = null,
+        ?string $status = null,
+        ?string $code = null,
+        ?string $title = null,
+        ?string $detail = null,
+        ?array $source = null,
         bool $hasMeta = false,
         $meta = null
     ) {

@@ -498,7 +498,7 @@ class Factory implements FactoryInterface
     /**
      * @inheritdoc
      */
-    public function createMediaType(string $type, string $subType, array $parameters = null): MediaTypeInterface
+    public function createMediaType(string $type, string $subType, ?array $parameters = null): MediaTypeInterface
     {
         return new MediaType($type, $subType, $parameters);
     }
@@ -510,7 +510,7 @@ class Factory implements FactoryInterface
         int $position,
         string $type,
         string $subType,
-        array $parameters = null,
+        ?array $parameters = null,
         float $quality = 1.0
     ): AcceptMediaTypeInterface {
         return new AcceptMediaType($position, $type, $subType, $parameters, $quality);

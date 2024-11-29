@@ -40,7 +40,7 @@ class Author extends stdClass
      *
      * @return Author
      */
-    public static function instance(int $identity, string $firstName, string $lastName, array $comments = null)
+    public static function instance(int $identity, string $firstName, string $lastName, ?array $comments = null)
     {
         $author = new self();
 

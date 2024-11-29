@@ -243,7 +243,7 @@ interface FactoryInterface
      *
      * @return MediaTypeInterface
      */
-    public function createMediaType(string $type, string $subType, array $parameters = null): MediaTypeInterface;
+    public function createMediaType(string $type, string $subType, ?array $parameters = null): MediaTypeInterface;
 
     /**
      * Create media type for Accept HTTP header.
@@ -260,7 +260,7 @@ interface FactoryInterface
         int $position,
         string $type,
         string $subType,
-        array $parameters = null,
+        ?array $parameters = null,
         float $quality = 1.0
     ): AcceptMediaTypeInterface;
 

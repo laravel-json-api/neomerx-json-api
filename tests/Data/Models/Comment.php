@@ -36,7 +36,7 @@ class Comment extends stdClass
      *
      * @return Comment
      */
-    public static function instance(int $identity, string $body, Author $author = null)
+    public static function instance(int $identity, string $body, ?Author $author = null)
     {
         $comment = new self();
 

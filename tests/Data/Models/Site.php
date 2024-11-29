@@ -36,7 +36,7 @@ class Site extends stdClass
      *
      * @return Site
      */
-    public static function instance(int $identity, string $name, array $posts = null)
+    public static function instance(int $identity, string $name, ?array $posts = null)
     {
         $site = new self();
 

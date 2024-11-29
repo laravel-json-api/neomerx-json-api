@@ -45,7 +45,7 @@ class AuthorCModel implements ArrayAccess, IteratorAggregate
      * @param string     $lastName
      * @param array|null $comments
      */
-    public function __construct(int $identity, string $firstName, string $lastName, array $comments = null)
+    public function __construct(int $identity, string $firstName, string $lastName, ?array $comments = null)
     {
         $this[self::ATTRIBUTE_ID]         = $identity;
         $this[self::ATTRIBUTE_FIRST_NAME] = $firstName;
