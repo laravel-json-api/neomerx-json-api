@@ -50,7 +50,7 @@ class BaseQueryParser implements BaseQueryParserInterface
      * @param array         $parameters
      * @param string[]|null $messages
      */
-    public function __construct(array $parameters = [], array $messages = null)
+    public function __construct(array $parameters = [], ?array $messages = null)
     {
         $this->setParameters($parameters)->setMessages($messages);
     }

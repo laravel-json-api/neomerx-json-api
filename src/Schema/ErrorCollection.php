@@ -141,12 +141,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
      */
     public function addDataError(
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -181,12 +181,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
      */
     public function addDataTypeError(
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -221,12 +221,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
      */
     public function addDataIdError(
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -261,12 +261,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
      */
     public function addAttributesError(
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -305,12 +305,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     public function addDataAttributeError(
         $name,
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -345,12 +345,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
      */
     public function addRelationshipsError(
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -389,12 +389,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     public function addRelationshipError(
         $name,
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -433,12 +433,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     public function addRelationshipTypeError(
         $name,
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -477,12 +477,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     public function addRelationshipIdError(
         $name,
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -521,12 +521,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     public function addQueryParameterError(
         string $name,
         string $title,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {
@@ -557,12 +557,12 @@ class ErrorCollection implements IteratorAggregate, ArrayAccess, Countable
     protected function addResourceError(
         string $title,
         string $pointer,
-        string $detail = null,
-        string $status = null,
+        ?string $detail = null,
+        ?string $status = null,
         $idx = null,
-        LinkInterface $aboutLink = null,
+        ?LinkInterface $aboutLink = null,
         ?iterable $typeLinks = null,
-        string $code = null,
+        ?string $code = null,
         bool $hasMeta = false,
         $meta = null
     ): self {

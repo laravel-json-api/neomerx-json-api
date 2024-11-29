@@ -44,7 +44,7 @@ class Post extends stdClass
         int $identity,
         string $title,
         string $body,
-        Author $author = null,
+        ?Author $author = null,
         iterable $comments = []
     ) {
         $post = new self();

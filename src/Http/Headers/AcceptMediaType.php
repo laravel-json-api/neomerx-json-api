@@ -48,7 +48,7 @@ class AcceptMediaType extends MediaType implements AcceptMediaTypeInterface
         int $position,
         string $type,
         string $subType,
-        array $parameters = null,
+        ?array $parameters = null,
         float $quality = 1.0
     ) {
         parent::__construct($type, $subType, $parameters);

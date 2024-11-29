@@ -39,7 +39,7 @@ class Category
      * @param string        $description
      * @param Category|null $parent
      */
-    public function __construct(int $index, string $description, Category $parent = null)
+    public function __construct(int $index, string $description, ?Category $parent = null)
     {
         $this->index       = $index;
         $this->description = $description;
