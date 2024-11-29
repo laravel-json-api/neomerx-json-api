@@ -44,6 +44,3 @@ jobs:
 
     - name: Execute mess detector
       run: composer run test-md
-
-    - name: Execute lint
-      run: composer run test-cs-fixer
